@@ -13,4 +13,5 @@ public class Infirmier
     [ForeignKey("Laboratoire")] 
     private int LaboratoireId { get; set; }
     private Laboratoire Laboratoire { get; set; }
+    private List<Bilan> Bilans { get; set; }
 }
