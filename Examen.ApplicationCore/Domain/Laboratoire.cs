@@ -8,4 +8,4 @@ public class Laboratoire
 
     public List<Infirmier> Infirmiers { get; set; }
     
-}
+}               
