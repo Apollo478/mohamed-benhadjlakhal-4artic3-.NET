@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -7,11 +8,12 @@ public class Patient
 {
     [Length(5,5,ErrorMessage = "Code Patient needs to be 5 characters long")]
     [DataType(DataType.MultilineText)]
-    private int CodePatient { get; set; }
-    private string EmailPatient { get; set; }
+    [Key]
+    public int CodePatient { get; set; }
+    public string EmailPatient { get; set; }
     [DisplayName("")]
-    private string Informations { get; set; }
-    private string NomComplet { get; set; }
-    private string NumeroTel { get; set; }
-    private List<Bilan> Bilans { get; set; }
+    public string Informations { get; set; }
+    public string NomComplet { get; set; }
+    public string NumeroTel { get; set; }
+    public List<Bilan> Bilans { get; set; }
 }

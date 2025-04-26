@@ -1,15 +1,16 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Examen.ApplicationCore.Domain;
 
 public class Bilan
 {
-    private DateTime DatePrievement { get; set; }
-    private string EmailMedecin { get; set; }
-    private bool Paye { get; set; }
-    [ForeignKey("Patient")] private int CodePatient { get; set; }
-    [ForeignKey("Infirmier")] private int InfirmierId { get; set; }
+    public DateTime DatePrievement { get; set; }
+    public string EmailMedecin { get; set; }
+    public bool Paye { get; set; }
+    [ForeignKey("Patient")] public int CodePatient { get; set; }
+    [ForeignKey("Infirmier")] public int InfirmierId { get; set; }
 
-    private Patient Patient { get; set; }
-    private Infirmier Infirmier { get; set; }
+    public Patient Patient { get; set; }
+    public Infirmier Infirmier { get; set; }
 }

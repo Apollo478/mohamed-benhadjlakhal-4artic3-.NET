@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -5,13 +6,14 @@ namespace Examen.ApplicationCore.Domain;
 
 public class Infirmier
 {
-    private int InfermierId { get; set; }
-    private string NomComplet { get; set; }
+    [Key]
+    public int InfermierId { get; set; }
+    public string NomComplet { get; set; }
     [EnumDataType(typeof(Specialite))]
-    private Specialite Specialite { get; set; }
+    public Specialite Specialite { get; set; }
     
     [ForeignKey("Laboratoire")] 
-    private int LaboratoireId { get; set; }
-    private Laboratoire Laboratoire { get; set; }
-    private List<Bilan> Bilans { get; set; }
+    public int LaboratoireId { get; set; }
+    public Laboratoire Laboratoire { get; set; }
+    public List<Bilan> Bilans { get; set; }
 }

@@ -1,6 +1,7 @@
 using Examen.UI.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace Examen.UI.Web.Controllers
 {

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Examen.ApplicationCore.Domain;
 
 public class Laboratoire
